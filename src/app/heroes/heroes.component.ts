@@ -8,9 +8,14 @@ import { HEROES } from '../mock-heroes'
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
+  selectedHero?: Hero
+
+  onSelect(hero: Hero) {
+    this.selectedHero = hero
+  }
+
+  getColor(hero: Hero) {
+    return this.selectedHero?.id === hero.id ? 'selected' : null
   }
 
   heroes: Hero[] = [...HEROES]
