@@ -9,7 +9,9 @@ import { HeroDetailsComponent } from './hero-details/hero-details.component'
 import { MessagesComponent } from './messages/messages.component'
 import { DashboardComponent } from './dashboard/dashboard.component'
 
+import { TableModule } from 'primeng/table'
 import { ButtonModule } from 'primeng/button'
+import { RatingModule } from 'primeng/rating'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,14 @@ import { ButtonModule } from 'primeng/button'
     MessagesComponent,
     DashboardComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ButtonModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ButtonModule,
+    TableModule,
+    RatingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
