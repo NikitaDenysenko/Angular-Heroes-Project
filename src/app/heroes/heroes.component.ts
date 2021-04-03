@@ -15,12 +15,8 @@ export class HeroesComponent implements OnInit {
     private heroService: HeroService
   ) {}
 
-  ngOnInit (): void {
-    this.getHeroes()
-  }
-
-  getHeroes (): void {
-    this.heroService.getHeroes().subscribe(heroes => (this.heroes = heroes))
+  ngOnInit () {
+    this.heroes = this.heroService.getHeroes()
   }
 }
 //routable hero details component
