@@ -12,7 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { TableModule } from 'primeng/table'
 import { ButtonModule } from 'primeng/button'
 import { RatingModule } from 'primeng/rating'
-
+import {CardModule} from 'primeng/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +27,8 @@ import { RatingModule } from 'primeng/rating'
     FormsModule,
     ButtonModule,
     TableModule,
-    RatingModule
+    RatingModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
