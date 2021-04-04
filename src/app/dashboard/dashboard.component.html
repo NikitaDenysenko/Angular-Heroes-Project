@@ -1,14 +1,15 @@
-<h2>Tour Heroes</h2>
-<a *ngFor="let hero of heroes"
-  routerLink="/detail/{{hero.id}}">
-  {{hero.name}}
-</a>
-
-<p-table>
+<h2>Dashboard</h2>
+<p-table [value]="heroes">
   <ng-template pTemplate="header">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-        </tr>
-    </ng-template>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-hero>
+    <tr [pSelectableRow]="hero" routerLink="/detail/{{hero.id}}">
+      <td>{{hero.id}}</td>
+      <td>{{hero.name}}</td>
+  </tr>
+  </ng-template>
 </p-table>
